@@ -21,10 +21,13 @@ class ContactRequest extends FormRequest
      */
     public function rules(): array
     {
+        // Get contact id
+        $contactId = $this->route('contact')?->id; // ou $this->contact se for implicit binding
+
         return [
             'name' => 'required',
             'phone' => 'required|min:9',
-            'email' => 'required|email|unique:contacts,email',
+            'email' => 'required|email|unique:contacts,email,' . $contactId,
             'notes' => 'nullable',
         ];
     }

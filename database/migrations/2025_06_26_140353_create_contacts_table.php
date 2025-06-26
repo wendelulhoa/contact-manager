@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->string('name')->comment('Contact name');
-            $table->string('phone', 9)->comment('Number of contact');
+            $table->string('phone')->unique()->comment('Number of contact');
             $table->string('email')->unique()->comment('Email of contact');
             $table->text('notes')->nullable()->comment('Note of contact');
             $table->unsignedBigInteger('user_id')->nullable()->comment('Qual usuário está vinculado');

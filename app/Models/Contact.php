@@ -17,4 +17,16 @@ class Contact extends Model
         'notes',
         'user_id',
     ];
+
+    /**
+     * Get contacts by user
+     *
+     * @param integer $userId = user
+     * 
+     * @return Illuminate\Database\Eloquent\Collection
+     */
+    public static function getContactsByUser(int $userId)
+    {
+        return Contact::where(['user_id' => $userId])->get();
+    }
 }
