@@ -111,6 +111,12 @@ class ContactController extends Controller
         try {
             DB::beginTransaction();
 
+            // check permission edit
+            if ($contact->user_id != auth()->user()->id) {
+                session()->flash('warningMsg', 'You do not have permission to edit this contact.');
+                return redirect()->back();
+            }
+
             // Update contact
             $contact->update([
                 'name' => $request['name'],
