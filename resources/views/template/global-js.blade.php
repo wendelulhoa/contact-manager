@@ -14,6 +14,7 @@
         $(".preloader").fadeOut(time);
     }
 
+    // sweet alert
     function sweetAlert2(title, action){
         Swal.fire({
             title: title,
@@ -28,6 +29,7 @@
           }); 
     }
 
+    // toastr
     @if (session('successMsg'))
         toastr.success("{{ session('successMsg') }}");
     @elseif(session('warningMsg'))

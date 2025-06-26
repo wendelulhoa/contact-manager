@@ -6,7 +6,6 @@ use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use Yajra\DataTables\Facades\DataTables;
@@ -21,7 +20,7 @@ class ContactController extends Controller
     public function index(): View|RedirectResponse
     {
         try {
-            // Define o título da página
+            // Title page
             $titlePage = 'Contacts';
 
             return view('contact.index', ['titlePage' => $titlePage]);
@@ -38,10 +37,10 @@ class ContactController extends Controller
     public function create(): View|RedirectResponse
     {
         try {
-            // Define o título da página
+            // Title page
             $titlePage = 'Create contact';
 
-            return view('contact.create');
+            return view('contact.create', ['titlePage' => $titlePage]);
         } catch (\Throwable $th) {
             session()->flash('warningMsg', 'Error accessing page.');
 
@@ -91,7 +90,7 @@ class ContactController extends Controller
     public function edit(Contact $contact): View|RedirectResponse
     {
         try {
-            // Define o título da página
+            // Title page
             $titlePage = 'edit contact';
 
             return view('contact.edit', ['contact' => $contact, 'titlePage' => $titlePage]);
@@ -169,7 +168,7 @@ class ContactController extends Controller
     public function getContactsByUserDatatable(): JsonResponse
     {
         try {
-            // Busca as produtos
+            // Get contacts
             $contacts = Contact::getContactsByUser(auth()->user()->id);
 
             return DataTables::of($contacts)

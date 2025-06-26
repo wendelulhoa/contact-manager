@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    /**
+     * Dashboard
+     *
+     * @return View|RedirectResponse
+     */
+    public function index(): View|RedirectResponse
     {
         try {
             // Name of the page
