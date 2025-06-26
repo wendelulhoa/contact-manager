@@ -53,12 +53,6 @@
                                 </div>
                                 <hr class="border-secondary border-opacity-50" />
                                 <p class="text-span">Settings</p>
-                                <a href="" class="dropdown-item">
-                                    <span>
-                                        <i class="ti ti-user"></i>
-                                        <span>my profile (developing)</span>
-                                    </span>
-                                </a>
                                 
                                 <hr class="border-secondary border-opacity-50" />
                                 <div class="d-grid mb-3">

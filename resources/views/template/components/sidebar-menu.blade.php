@@ -31,10 +31,6 @@
                         </div>
                         <div class="collapse pc-user-links" id="pc_sidebar_userlink">
                             <div class="pt-3">
-                                <a href="" disable>
-                                    <i class="ti ti-user"></i>
-                                    <span>My Profile (developing)</span>
-                                </a>
                                 <a href="#!" onclick="logoutSystem()">
                                     <i class="ti ti-power"></i>
                                     <span>Logout</span>
