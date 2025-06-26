@@ -18,15 +18,6 @@
         <!-- [Mobile Media Block end] -->
         <div class="ms-auto">
             <ul class="list-unstyled">
-                <li class="dropdown pc-h-item">
-                    <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown"
-                        href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <svg class="pc-icon">
-                            <use xlink:href="#custom-sun-1"></use>
-                        </svg>
-                    </a>
-                </li>
-                
                 <li class="dropdown pc-h-item header-user-profile">
                     <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown"
                         href="#" role="button" aria-haspopup="false" data-bs-auto-close="outside"
@@ -41,7 +32,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
                         <div class="dropdown-header d-flex align-items-center justify-content-between">
-                            <h5 class="m-0">Profile</h5>
+                            <h5 class="m-0">Profile (developing)</h5>
                         </div>
                         <div class="dropdown-body">
                             <div class="profile-notification-scroll position-relative"
@@ -65,7 +56,7 @@
                                 <a href="" class="dropdown-item">
                                     <span>
                                         <i class="ti ti-user"></i>
-                                        <span>my profile</span>
+                                        <span>my profile (developing)</span>
                                     </span>
                                 </a>
                                 
